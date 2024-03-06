@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: "{{ .values.metadata.name }}"
-  namespace: "{{ .values.metadata.namespace }}"
+  name: "{{ .Values.metadata.name }}"
+  namespace: "{{ .Values.metadata.namespace }}"
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: "{{ .values.app.value }}"
+      app: "{{ .Values.app.value }}"
   template:
     metadata:
       labels:
-        app: "{{ .values.app.value }}"
+        app: "{{ .Values.app.value }}"
     spec:
       containers:
-        - name: "{{ .values.containers.name }}"
-          image: "{{ .values.image.repository }}:{{ .values.image.tag }}"
+        - name: "{{ .Values.containers.name }}"
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           ports:
-            - containerPort: "{{ .values.ports.targetPort }}"
+            - containerPort: "{{ .Values.ports.targetPort }}"
       imagePullSecrets:
         - name: ecr-registry
 
