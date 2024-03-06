@@ -1,0 +1,14 @@
+piVersion: v1
+kind: Service
+metadata:
+  name: "{{ .values.service.name }}"
+  namespace: default
+spec:
+  selector:
+      app: "{{ .values.app.value }}"
+  ports:
+    - protocol: TCP
+      port: "{{ .values.ports.port }}"
+      targetPort: "{{ .values.ports.targetPort }}"
+  type: LoadBalancer
+
