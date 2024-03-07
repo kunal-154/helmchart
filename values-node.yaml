@@ -9,7 +9,7 @@ containers:
   name: node-app-container
 image:
   repository: 442222453508.dkr.ecr.ap-south-1.amazonaws.com/node-app-repo
-  tag: 6da94651c70e6a9630c6009c2bcdf4b3dd995d0f
+  tag: e5ec4133eb296bf3f079d9ec050d483f54a880fa
 ports:
   port: 80
   targetPort: 3000
