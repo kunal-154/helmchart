@@ -20,4 +20,3 @@ spec:
             - containerPort: {{ .Values.ports.targetPort }}
       imagePullSecrets:
         - name: ecr-registry
-
