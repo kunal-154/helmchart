@@ -9,7 +9,7 @@ containers:
   name: python-app-container
 image:
   repository: 442222453508.dkr.ecr.ap-south-1.amazonaws.com/python-app-repo
-  tag: 0cd110a9f341b983eb9e24e45342aa5e296207c9
+  tag: 1a18a34ddcab8d7ec41eba57a6887af1e8362ca5
 ports:
   port: 80
   targetPort: 5000
