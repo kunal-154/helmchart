@@ -8,7 +8,7 @@ spec:
       app: "{{ .Values.app.value }}"
   ports:
     - protocol: TCP
-      port: "{{ .Values.ports.port }}"
-      targetPort: "{{ .Values.ports.targetPort }}"
+      port: {{ .Values.ports.port }}
+      targetPort: {{ .Values.ports.targetPort }}
   type: LoadBalancer
 
